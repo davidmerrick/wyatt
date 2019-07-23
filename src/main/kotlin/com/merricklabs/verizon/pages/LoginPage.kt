@@ -11,26 +11,35 @@ class LoginPage(private val browser: WebDriver) {
     }
 
     fun enterUsername(username: String) {
-        val usernameSelector = By.cssSelector("input#$USERNAME_FIELD_ID")
+        val selector = By.cssSelector(USERNAME_SELECTOR)
         WebDriverWait(browser, 5)
-                .until(ExpectedConditions.elementToBeClickable(usernameSelector))
-        val field = browser.findElement(usernameSelector)
+                .until(ExpectedConditions.elementToBeClickable(selector))
+        val field = browser.findElement(selector)
         field.click()
         field.sendKeys(username)
     }
 
     fun enterPassword(password: String) {
-        val usernameSelector = By.cssSelector("input#$PASSWORD_FIELD_ID")
+        val selector = By.cssSelector(PASSWORD_SELECTOR)
         WebDriverWait(browser, 5)
-                .until(ExpectedConditions.elementToBeClickable(usernameSelector))
-        val field = browser.findElement(usernameSelector)
+                .until(ExpectedConditions.elementToBeClickable(selector))
+        val field = browser.findElement(selector)
         field.click()
         field.sendKeys(password)
     }
 
+    fun submit() {
+        val selector = By.cssSelector(SUBMIT_SELECTOR)
+        WebDriverWait(browser, 5)
+                .until(ExpectedConditions.elementToBeClickable(selector))
+        val field = browser.findElement(selector)
+        field.click()
+    }
+
     private companion object {
         const val LOGIN_URL = "https://login.verizonwireless.com/vzauth/UI/Login?userNameOnly=false&mode=i&realm=vzw&customerType=DO"
-        const val USERNAME_FIELD_ID = "IDToken1"
-        const val PASSWORD_FIELD_ID = "IDToken2"
+        const val USERNAME_SELECTOR = "input#IDToken1"
+        const val PASSWORD_SELECTOR = "input#IDToken2"
+        const val SUBMIT_SELECTOR = "button#login-submit"
     }
 }

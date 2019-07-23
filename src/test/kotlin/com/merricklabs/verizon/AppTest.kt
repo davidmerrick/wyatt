@@ -12,8 +12,10 @@ class AppTest {
         val browser = ChromeDriver()
         val loginPage = LoginPage(browser)
         loginPage.goto()
-        loginPage.enterUsername("foo")
-        loginPage.enterPassword("bar")
+        loginPage.enterUsername(System.getenv("USERNAME"))
+        loginPage.enterPassword(System.getenv("PASSWORD"))
+        loginPage.submit()
+
         Thread.sleep(5000)
         browser.close()
     }
