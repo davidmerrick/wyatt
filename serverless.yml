@@ -7,7 +7,7 @@ plugins:
 
 custom:
   client:
-    bucketName: ${self:service}
+    bucketName: ${self:service}-bills
 
 provider:
   name: aws
