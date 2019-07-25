@@ -4,8 +4,8 @@ group = "com.merricklabs.wyatt"
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version Versions.org_jetbrains_kotlin
-    id("de.fayard.buildSrcVersions") version "0.3.2"
-    id("com.github.johnrengelman.shadow") version "5.0.0"
+    id("de.fayard.buildSrcVersions") version Versions.de_fayard_buildsrcversions_gradle_plugin
+    id("com.github.johnrengelman.shadow") version Versions.com_github_johnrengelman_shadow_gradle_plugin
 }
 
 repositories {
@@ -21,9 +21,11 @@ dependencies {
     implementation(Libs.okhttp)
     implementation(Libs.aws_lambda_java_core)
     implementation(Libs.aws_lambda_java_events)
+    implementation(Libs.aws_java_sdk_s3)
     implementation(Libs.jackson_core)
     implementation(Libs.jackson_databind)
     implementation(Libs.jackson_module_kotlin)
+    implementation(Libs.kotlin_logging)
 
     testImplementation(Libs.koin_test)
     testImplementation(Libs.kotlin_test)

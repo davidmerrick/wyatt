@@ -1,15 +1,14 @@
 package com.merricklabs.wyatt.handlers.logic
 
 import com.amazonaws.services.lambda.runtime.Context
-import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent
-import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent
-import org.apache.http.HttpStatus
+import com.amazonaws.services.lambda.runtime.events.ScheduledEvent
+import mu.KotlinLogging
 import org.koin.core.KoinComponent
 
+private val log = KotlinLogging.logger {}
+
 class WyattLogic : KoinComponent {
-    fun handleRequest(input: APIGatewayProxyRequestEvent, context: Context): APIGatewayProxyResponseEvent {
-        return APIGatewayProxyResponseEvent().apply {
-            statusCode = HttpStatus.SC_OK
-        }
+    fun handleRequest(input: ScheduledEvent, context: Context) {
+        log.info("Received event")
     }
 }

@@ -1,5 +1,14 @@
 service: wyatt
 
+frameworkVersion: ">=1.2.0 <2.0.0"
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: ${self:service}
+
 provider:
   name: aws
   runtime: java8
@@ -7,6 +16,11 @@ provider:
   region: us-west-2
   memorySize: 512
   timeout: 20
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+      Resource: "*"
 
 package:
   artifact: build/libs/${self:service}.jar
@@ -17,3 +31,11 @@ functions:
     events:
       # 5th day of every month
       - schedule: cron(0 0 5 * ? *)
+
+resources:
+  Resources:
+    s3Bucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.client.bucketName}
+        AccessControl: BucketOwnerRead

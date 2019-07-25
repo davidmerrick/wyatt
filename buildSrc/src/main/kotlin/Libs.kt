@@ -5,14 +5,22 @@
  *   `$ ./gradlew buildSrcVersions` */
 object Libs {
     /**
+     * https://aws.amazon.com/sdkforjava */
+    const val aws_java_sdk_s3: String = "com.amazonaws:aws-java-sdk-s3:" + Versions.aws_java_sdk_s3
+
+    /**
      * https://aws.amazon.com/lambda/ */
     const val aws_lambda_java_core: String = "com.amazonaws:aws-lambda-java-core:" +
             Versions.aws_lambda_java_core
 
     /**
-     * http://github.com/FasterXML/jackson */
-    const val jackson_annotations: String = "com.fasterxml.jackson.core:jackson-annotations:" +
-            Versions.com_fasterxml_jackson_core
+     * https://aws.amazon.com/lambda/ */
+    const val aws_lambda_java_events: String = "com.amazonaws:aws-lambda-java-events:" +
+            Versions.aws_lambda_java_events
+
+    /**
+     * https://github.com/codeborne/selenide */
+    const val selenide: String = "com.codeborne:selenide:" + Versions.selenide
 
     /**
      * https://github.com/FasterXML/jackson-core */
@@ -29,14 +37,9 @@ object Libs {
     const val jackson_module_kotlin: String =
             "com.fasterxml.jackson.module:jackson-module-kotlin:" + Versions.jackson_module_kotlin
 
-    /**
-     * https://aws.amazon.com/lambda/ */
-    const val aws_lambda_java_events: String = "com.amazonaws:aws-lambda-java-events:" +
-            Versions.aws_lambda_java_events
-
-    /**
-     * https://github.com/codeborne/selenide */
-    const val selenide: String = "com.codeborne:selenide:" + Versions.selenide
+    const val com_github_johnrengelman_shadow_gradle_plugin: String =
+            "com.github.johnrengelman.shadow:com.github.johnrengelman.shadow.gradle.plugin:" +
+                    Versions.com_github_johnrengelman_shadow_gradle_plugin
 
     /**
      * https://github.com/square/okhttp */
@@ -44,17 +47,22 @@ object Libs {
 
     const val de_fayard_buildsrcversions_gradle_plugin: String =
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
-            Versions.de_fayard_buildsrcversions_gradle_plugin
+                    Versions.de_fayard_buildsrcversions_gradle_plugin
+
+    /**
+     * http://www.github.com/kotlintest/kotlintest */
+    const val kotlintest_runner_junit5: String = "io.kotlintest:kotlintest-runner-junit5:" +
+            Versions.kotlintest_runner_junit5
 
     const val org_jetbrains_kotlin_jvm_gradle_plugin: String =
             "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:" +
-            Versions.org_jetbrains_kotlin_jvm_gradle_plugin
+                    Versions.org_jetbrains_kotlin_jvm_gradle_plugin
 
     /**
      * https://kotlinlang.org/ */
     const val kotlin_scripting_compiler_embeddable: String =
             "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:" +
-            Versions.org_jetbrains_kotlin
+                    Versions.org_jetbrains_kotlin
 
     /**
      * https://kotlinlang.org/ */
@@ -71,14 +79,14 @@ object Libs {
     const val kotlin_test: String = "org.jetbrains.kotlin:kotlin-test:" +
             Versions.org_jetbrains_kotlin
 
+    /**
+     * https://github.com/MicroUtils/kotlin-logging */
+    const val kotlin_logging: String = "io.github.microutils:kotlin-logging:" +
+            Versions.kotlin_logging
+
     const val koin_core: String = "org.koin:koin-core:" + Versions.org_koin
 
     const val koin_test: String = "org.koin:koin-test:" + Versions.org_koin
-
-    /**
-     * http://www.github.com/kotlintest/kotlintest */
-    const val kotlintest_runner_junit5: String = "io.kotlintest:kotlintest-runner-junit5:" +
-            Versions.kotlintest_runner_junit5
 
     /**
      * http://www.seleniumhq.org/ */
