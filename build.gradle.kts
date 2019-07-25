@@ -1,5 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+group = "com.merricklabs.wyatt"
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version Versions.org_jetbrains_kotlin
     id("de.fayard.buildSrcVersions") version "0.3.2"
