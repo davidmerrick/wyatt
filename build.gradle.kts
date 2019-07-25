@@ -11,18 +11,18 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.seleniumhq.selenium:selenium-java:3.141.59")
+    implementation(Libs.kotlin_stdlib_jdk8)
+    implementation(Libs.selenium_java)
     implementation(Libs.selenide)
     implementation(Libs.koin_core)
     implementation(Libs.okhttp)
-    implementation("com.amazonaws:aws-lambda-java-core:1.2.0")
-    implementation("com.amazonaws:aws-lambda-java-events:2.2.6")
+    implementation(Libs.aws_lambda_java_core)
+    implementation(Libs.aws_lambda_java_events)
 
-    testImplementation("org.koin:koin-test:2.0.1")
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
-    testImplementation("org.testng:testng:6.14.3")
+    testImplementation(Libs.koin_test)
+    testImplementation(Libs.kotlin_test)
+    testImplementation(Libs.kotlin_test_junit)
+    testImplementation(Libs.testng)
 }
 
 val deployDev = tasks.create<Exec>("deployDev") {
