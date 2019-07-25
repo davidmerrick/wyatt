@@ -20,6 +20,6 @@ class WyattHandler : RequestHandler<ScheduledEvent, Unit> {
     }
 
     override fun handleRequest(input: ScheduledEvent, context: Context) {
-        return logic.handleRequest(input, context)
+        return logic.handleRequest()
     }
 }

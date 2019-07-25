@@ -1,4 +1,4 @@
-package com.merricklabs.wyatt.handlers.external
+package com.merricklabs.wyatt.external.verizon
 
 import com.google.common.net.HttpHeaders
 import com.merricklabs.wyatt.models.verizon.VerizonBill

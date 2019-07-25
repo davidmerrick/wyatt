@@ -19,6 +19,12 @@ object Libs {
             Versions.aws_lambda_java_events
 
     /**
+     * https://github.com/nhaarman/mockito-kotlin */
+    const val mockito_kotlin: String = "com.nhaarman.mockitokotlin2:mockito-kotlin:" +
+            Versions.mockito_kotlin
+
+
+    /**
      * https://github.com/codeborne/selenide */
     const val selenide: String = "com.codeborne:selenide:" + Versions.selenide
 

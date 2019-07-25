@@ -32,6 +32,7 @@ dependencies {
     testImplementation(Libs.kotlin_test_junit)
     testImplementation(Libs.kotlintest_runner_junit5)
     testImplementation(Libs.testng)
+    testImplementation(Libs.mockito_kotlin)
 }
 
 val deployDev = tasks.create<Exec>("deployDev") {

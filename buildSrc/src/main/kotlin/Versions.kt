@@ -7,9 +7,9 @@
 object Versions {
     const val aws_java_sdk_s3: String = "1.11.597" // available: "1.11.598"
 
-    const val aws_lambda_java_core: String = "1.2.0" 
+    const val aws_lambda_java_core: String = "1.2.0"
 
-    const val aws_lambda_java_events: String = "2.2.6" 
+    const val aws_lambda_java_events: String = "2.2.6"
 
     const val selenide: String = "5.2.6"
 
@@ -22,6 +22,8 @@ object Versions {
 
     const val kotlin_logging: String = "1.6.26"
 
+    const val mockito_kotlin: String = "2.1.0"
+
     const val okhttp: String = "3.14.2" // available: "4.0.1"
 
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.3.2"
@@ -30,13 +32,13 @@ object Versions {
 
     const val org_jetbrains_kotlin_jvm_gradle_plugin: String = "1.3.41"
 
-    const val org_jetbrains_kotlin: String = "1.3.41" 
+    const val org_jetbrains_kotlin: String = "1.3.41"
 
     const val org_koin: String = "2.0.1"
 
     const val selenium_java: String = "3.141.59"
 
-    const val testng: String = "6.14.3" 
+    const val testng: String = "6.14.3"
 
     /**
      *

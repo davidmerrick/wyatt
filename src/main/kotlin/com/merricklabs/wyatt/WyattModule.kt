@@ -1,6 +1,8 @@
 package com.merricklabs.wyatt
 
-import com.merricklabs.wyatt.handlers.external.VerizonClient
+import com.merricklabs.wyatt.config.WyattConfig
+import com.merricklabs.wyatt.external.aws.WyattS3Client
+import com.merricklabs.wyatt.external.verizon.VerizonClient
 import com.merricklabs.wyatt.handlers.logic.WyattLogic
 import com.merricklabs.wyatt.handlers.util.ChromeWebService
 import com.merricklabs.wyatt.pages.LoginPage
@@ -15,4 +17,6 @@ val WyattModule = module {
     single { VerizonClient() }
     single { WyattObjectMapper() }
     single { WyattLogic() }
+    single { WyattS3Client() }
+    single { WyattConfig() }
 }

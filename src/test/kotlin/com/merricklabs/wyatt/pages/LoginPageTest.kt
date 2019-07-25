@@ -1,7 +1,7 @@
 package com.merricklabs.wyatt.pages
 
 import com.merricklabs.wyatt.IntegrationTestBase
-import com.merricklabs.wyatt.handlers.external.VerizonClient
+import com.merricklabs.wyatt.external.verizon.VerizonClient
 import com.merricklabs.wyatt.handlers.util.ChromeWebService
 import org.koin.test.get
 import org.testng.annotations.Test
