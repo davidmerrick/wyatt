@@ -1,6 +1,8 @@
-package com.merricklabs.verizon.handlers.external
+package com.merricklabs.wyatt.handlers.external
 
 import com.google.common.net.HttpHeaders
+import com.merricklabs.wyatt.models.verizon.VerizonBill
+import com.merricklabs.wyatt.util.WyattObjectMapper
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.koin.core.KoinComponent
@@ -10,15 +12,17 @@ import org.openqa.selenium.Cookie
 class VerizonClient : KoinComponent {
 
     private val okHttpClient by inject<OkHttpClient>()
+    private val mapper by inject<WyattObjectMapper>()
 
-    fun fetchBillJson(cookies: Set<Cookie>): String {
+
+    fun fetchBill(cookies: Set<Cookie>): VerizonBill {
         val request = Request.Builder()
                 .url(BILL_URL)
                 .addHeader(HttpHeaders.COOKIE, cookies.joinToString(";"))
                 .get()
                 .build()
         val response = okHttpClient.newCall(request).execute()
-        return response.body()!!.string()
+        return mapper.readValue(response.body()!!.string(), VerizonBill::class.java)
     }
 
     private companion object {

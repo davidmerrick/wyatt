@@ -1,4 +1,4 @@
-package com.merricklabs.verizon
+package com.merricklabs.wyatt
 
 import org.koin.core.context.startKoin
 import org.koin.core.context.stopKoin
@@ -20,7 +20,7 @@ open class IntegrationTestBase : KoinTest {
     @BeforeMethod
     protected fun beforeMethod() {
         startKoin {
-            modules(BillFetcherModule)
+            modules(WyattModule)
         }
     }
 

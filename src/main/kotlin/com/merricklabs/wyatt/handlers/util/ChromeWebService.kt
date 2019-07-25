@@ -1,4 +1,4 @@
-package com.merricklabs.verizon.handlers.util
+package com.merricklabs.wyatt.handlers.util
 
 import org.koin.core.KoinComponent
 import org.openqa.selenium.chrome.ChromeDriver

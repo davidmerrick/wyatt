@@ -1,6 +1,6 @@
-package com.merricklabs.verizon.pages
+package com.merricklabs.wyatt.pages
 
-import com.merricklabs.verizon.handlers.util.ChromeWebService
+import com.merricklabs.wyatt.handlers.util.ChromeWebService
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import org.openqa.selenium.By

@@ -1,4 +1,4 @@
-service: hello-world
+service: wyatt
 
 provider:
   name: aws
@@ -11,10 +11,7 @@ provider:
 package:
   artifact: build/libs/${self:service}.jar
 
+# Todo: Add a CloudWatch event source here
 functions:
   helloworld-handler:
-    handler: com.merricklabs.lambda.handlers.HelloWorldHandler
-    events:
-      - http:
-          path: /
-          method: get
+    handler: com.merricklabs.wyatt.handlers.WyattHandler

@@ -1,0 +1,1098 @@
+{
+  "data": {
+    "changes_new": {
+      "PreviousBill": {
+        "header": "Last bill",
+        "label": "May 03 - June 02",
+        "value": "$294.17",
+        "items": [
+          {
+            "label": "Credit balance",
+            "value": "$0.00",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "One-time charges and credits",
+            "value": "$0.00",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "Monthly charges & Add-ons",
+            "value": "$280.82",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "Surcharges",
+            "value": "$9.05",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "Government taxes & fees",
+            "value": "$4.30",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "discountItem": false,
+        "negativeValue": false,
+        "isLinkItem": false,
+        "isNew": false,
+        "hasCharges": false,
+        "openWindow": false,
+        "hasOneTimeChargesPlanProrateHeader": false
+      },
+      "CurrentBill": {
+        "header": "July",
+        "label": "June 03 - July 02",
+        "value": "$294.87",
+        "items": [
+          {
+            "label": "Credit balance",
+            "value": "$0.00",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "One-time charges and credits",
+            "value": "$0.00",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "Monthly charges & Add-ons",
+            "value": "$280.82",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "Surcharges",
+            "value": "$9.75",
+            "items": [
+              {
+                "label": "$0.70 from Surcharge",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "trend": "U",
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "label": "Government taxes & fees",
+            "value": "$4.30",
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "discountItem": false,
+        "negativeValue": false,
+        "isLinkItem": false,
+        "isNew": false,
+        "hasCharges": false,
+        "openWindow": false,
+        "hasOneTimeChargesPlanProrateHeader": false
+      },
+      "NextMonthBill": {
+        "header": "August",
+        "label": "July 03 - August 02",
+        "items": [
+          {
+            "label": "Next month is an estimated of your new monthly bill. Changes made after August 02 are not reflected.",
+            "discountItem": false,
+            "negativeValue": false,
+            "linkName": "See your next bill summary",
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "discountItem": false,
+            "negativeValue": false,
+            "linkName": "See your next bill summary",
+            "linkUrl": "https://myvpostpay.verizonwireless.com/vzw/accountholder/digitalocker/nextBillSummary.action",
+            "isLinkItem": true,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "discountItem": false,
+        "negativeValue": false,
+        "isLinkItem": false,
+        "isNew": false,
+        "hasCharges": false,
+        "openWindow": false,
+        "hasOneTimeChargesPlanProrateHeader": false
+      }
+    },
+    "bill": {
+      "total": "$294.87",
+      "charges": "$294.87",
+      "balanceForward": "$0.00"
+    },
+    "hasUTVP": true,
+    "jvmName": "nope",
+    "lineLevelDetails": [
+      {
+        "header": "George Michael",
+        "mtn": "223.456.7890",
+        "credits": "$12.50",
+        "deviceImage": "nope",
+        "value": "$58.22",
+        "items": [
+          {
+            "header": "Monthly charges",
+            "value": "$55.41",
+            "items": [
+              {
+                "label": "Smartphone line access",
+                "value": "$20.00",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "header": "Device payment plan",
+                "label": "Device payment plan (Payment 20 of 24)",
+                "items": [
+                  {
+                    "label": " nope",
+                    "value": "$47.91",
+                    "discountItem": false,
+                    "negativeValue": false,
+                    "isLinkItem": false,
+                    "isNew": false,
+                    "hasCharges": false,
+                    "openWindow": false,
+                    "hasOneTimeChargesPlanProrateHeader": false
+                  }
+                ],
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "View Details",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "View Details",
+                "linkUrl": "nope",
+                "isLinkItem": true,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Trade-In Device Promo Credit 20 of 24",
+                "value": "$12.50",
+                "discountItem": true,
+                "negativeValue": true,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Surcharges",
+            "value": "$1.95",
+            "items": [
+              {
+                "label": "Fed Universal Service Charge",
+                "value": "$0.55",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Regulatory Charge",
+                "value": "$0.17",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Administrative Charge",
+                "value": "$1.23",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are Surcharges?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are Surcharges?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "Surcharges are discretionary charges, subject to change, not taxes, that we collect to fund certain governmental and other expenses.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Taxes and gov fees",
+            "value": "$0.86",
+            "items": [
+              {
+                "label": "OR State 911 Surcharge",
+                "value": "$0.75",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "OR RSPF Surcharge",
+                "value": "$0.11",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are taxes and gov fees?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are taxes and gov fees?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "We are required by law to collect these charges, based on your <a href='https://wbillpay.verizonwireless.com/vzw/accountholder/profile/CellPhoneUsageAction.action' analyticstrack ='serviceAddress-link'>service address</a>.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "uuid": "nope",
+        "linkName": "Manage Device",
+        "linkUrl": "https://myvpostpay.verizonwireless.com/ui/hub/ao/mydevices",
+        "negativeValue": false,
+        "planType": "60",
+        "hasHexGoUnlimited": false,
+        "hasHexBeyondUnlimited": false,
+        "hasHexAboveUnlimited": false,
+        "hasHexUnlimited": false,
+        "hasAppleMusic": false,
+        "hasBeyondUnlimited5G": false,
+        "hasAboveUnlimited5G": false,
+        "hasUnlimited5G": false,
+        "hasJustKidsPlan": false
+      },
+      {
+        "header": "Bob Loblaw",
+        "mtn": "223.456.7890",
+        "deviceImage": "nope",
+        "value": "$22.81",
+        "items": [
+          {
+            "header": "Monthly charges",
+            "value": "$20.00",
+            "items": [
+              {
+                "label": "Smartphone line access",
+                "value": "$20.00",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Surcharges",
+            "value": "$1.95",
+            "items": [
+              {
+                "label": "Fed Universal Service Charge",
+                "value": "$0.55",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Regulatory Charge",
+                "value": "$0.17",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Administrative Charge",
+                "value": "$1.23",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are Surcharges?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are Surcharges?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "Surcharges are discretionary charges, subject to change, not taxes, that we collect to fund certain governmental and other expenses.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Taxes and gov fees",
+            "value": "$0.86",
+            "items": [
+              {
+                "label": "OR State 911 Surcharge",
+                "value": "$0.75",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "OR RSPF Surcharge",
+                "value": "$0.11",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are taxes and gov fees?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are taxes and gov fees?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "We are required by law to collect these charges, based on your <a href='https://wbillpay.verizonwireless.com/vzw/accountholder/profile/CellPhoneUsageAction.action' analyticstrack ='serviceAddress-link'>service address</a>.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "uuid": "nope",
+        "linkName": "Manage Device",
+        "linkUrl": "https://myvpostpay.verizonwireless.com/ui/hub/ao/mydevices",
+        "negativeValue": false,
+        "planType": "60",
+        "hasHexGoUnlimited": false,
+        "hasHexBeyondUnlimited": false,
+        "hasHexAboveUnlimited": false,
+        "hasHexUnlimited": false,
+        "hasAppleMusic": false,
+        "hasBeyondUnlimited5G": false,
+        "hasAboveUnlimited5G": false,
+        "hasUnlimited5G": false,
+        "hasJustKidsPlan": false
+      },
+      {
+        "header": "Tobias Funke",
+        "mtn": "323.456.7890",
+        "deviceImage": "nope",
+        "value": "$22.81",
+        "items": [
+          {
+            "header": "Monthly charges",
+            "value": "$20.00",
+            "items": [
+              {
+                "label": "Smartphone line access",
+                "value": "$20.00",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Surcharges",
+            "value": "$1.95",
+            "items": [
+              {
+                "label": "Fed Universal Service Charge",
+                "value": "$0.55",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Regulatory Charge",
+                "value": "$0.17",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Administrative Charge",
+                "value": "$1.23",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are Surcharges?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are Surcharges?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "Surcharges are discretionary charges, subject to change, not taxes, that we collect to fund certain governmental and other expenses.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Taxes and gov fees",
+            "value": "$0.86",
+            "items": [
+              {
+                "label": "OR State 911 Surcharge",
+                "value": "$0.75",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "OR RSPF Surcharge",
+                "value": "$0.11",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are taxes and gov fees?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are taxes and gov fees?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "We are required by law to collect these charges, based on your <a href='https://wbillpay.verizonwireless.com/vzw/accountholder/profile/CellPhoneUsageAction.action' analyticstrack ='serviceAddress-link'>service address</a>.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "uuid": "nope",
+        "linkName": "Manage Device",
+        "linkUrl": "https://myvpostpay.verizonwireless.com/ui/hub/ao/mydevices",
+        "negativeValue": false,
+        "planType": "60",
+        "hasHexGoUnlimited": false,
+        "hasHexBeyondUnlimited": false,
+        "hasHexAboveUnlimited": false,
+        "hasHexUnlimited": false,
+        "hasAppleMusic": false,
+        "hasBeyondUnlimited5G": false,
+        "hasAboveUnlimited5G": false,
+        "hasUnlimited5G": false,
+        "hasJustKidsPlan": false
+      },
+      {
+        "header": "Michael Bluth",
+        "mtn": "423.457.789",
+        "deviceImage": "nope",
+        "value": "$58.22",
+        "items": [
+          {
+            "header": "Monthly charges",
+            "value": "$55.41",
+            "items": [
+              {
+                "label": "Smartphone line access",
+                "value": "$20.00",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "header": "Device payment plan",
+                "label": "Device payment plan (Payment 20 of 24)",
+                "items": [
+                  {
+                    "label": " nope",
+                    "value": "$35.41",
+                    "discountItem": false,
+                    "negativeValue": false,
+                    "isLinkItem": false,
+                    "isNew": false,
+                    "hasCharges": false,
+                    "openWindow": false,
+                    "hasOneTimeChargesPlanProrateHeader": false
+                  }
+                ],
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "View Details",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "View Details",
+                "linkUrl": "nope",
+                "isLinkItem": true,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Surcharges",
+            "value": "$1.95",
+            "items": [
+              {
+                "label": "Fed Universal Service Charge",
+                "value": "$0.55",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Regulatory Charge",
+                "value": "$0.17",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Administrative Charge",
+                "value": "$1.23",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are Surcharges?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are Surcharges?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "Surcharges are discretionary charges, subject to change, not taxes, that we collect to fund certain governmental and other expenses.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Taxes and gov fees",
+            "value": "$0.86",
+            "items": [
+              {
+                "label": "OR State 911 Surcharge",
+                "value": "$0.75",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "OR RSPF Surcharge",
+                "value": "$0.11",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are taxes and gov fees?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are taxes and gov fees?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "We are required by law to collect these charges, based on your <a href='https://wbillpay.verizonwireless.com/vzw/accountholder/profile/CellPhoneUsageAction.action' analyticstrack ='serviceAddress-link'>service address</a>.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "uuid": "nope",
+        "linkName": "Manage Device",
+        "linkUrl": "https://myvpostpay.verizonwireless.com/ui/hub/ao/mydevices",
+        "negativeValue": false,
+        "planType": "60",
+        "hasHexGoUnlimited": false,
+        "hasHexBeyondUnlimited": false,
+        "hasHexAboveUnlimited": false,
+        "hasHexUnlimited": false,
+        "hasAppleMusic": false,
+        "hasBeyondUnlimited5G": false,
+        "hasAboveUnlimited5G": false,
+        "hasUnlimited5G": false,
+        "hasJustKidsPlan": false
+      },
+      {
+        "header": "Lucille Bluth",
+        "mtn": "523.457.789",
+        "deviceImage": "Nope",
+        "value": "$22.81",
+        "items": [
+          {
+            "header": "Monthly charges",
+            "value": "$20.00",
+            "items": [
+              {
+                "label": "Smartphone line access",
+                "value": "$20.00",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Surcharges",
+            "value": "$1.95",
+            "items": [
+              {
+                "label": "Fed Universal Service Charge",
+                "value": "$0.55",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Regulatory Charge",
+                "value": "$0.17",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "Administrative Charge",
+                "value": "$1.23",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are Surcharges?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are Surcharges?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "Surcharges are discretionary charges, subject to change, not taxes, that we collect to fund certain governmental and other expenses.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          },
+          {
+            "header": "Taxes and gov fees",
+            "value": "$0.86",
+            "items": [
+              {
+                "label": "OR State 911 Surcharge",
+                "value": "$0.75",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "OR RSPF Surcharge",
+                "value": "$0.11",
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              },
+              {
+                "label": "What are taxes and gov fees?",
+                "discountItem": false,
+                "negativeValue": false,
+                "linkName": "What are taxes and gov fees?",
+                "isLinkItem": true,
+                "isNew": false,
+                "linkDescription": "We are required by law to collect these charges, based on your <a href='https://wbillpay.verizonwireless.com/vzw/accountholder/profile/CellPhoneUsageAction.action' analyticstrack ='serviceAddress-link'>service address</a>.",
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "uuid": "nope",
+        "linkName": "Manage Device",
+        "linkUrl": "https://myvpostpay.verizonwireless.com/ui/hub/ao/mydevices",
+        "negativeValue": false,
+        "planType": "60",
+        "hasHexGoUnlimited": false,
+        "hasHexBeyondUnlimited": false,
+        "hasHexAboveUnlimited": false,
+        "hasHexUnlimited": false,
+        "hasAppleMusic": false,
+        "hasBeyondUnlimited5G": false,
+        "hasAboveUnlimited5G": false,
+        "hasUnlimited5G": false,
+        "hasJustKidsPlan": false
+      }
+    ],
+    "accountSummaryDetails": [
+      {
+        "header": "Account charges",
+        "value": "$110.00",
+        "items": [
+          {
+            "header": "Monthly charges",
+            "value": "$110.00",
+            "items": [
+              {
+                "header": "The new Verizon Plan Unlimited",
+                "items": [
+                  {
+                    "label": "Plan cost",
+                    "value": "$110.00",
+                    "discountItem": false,
+                    "negativeValue": false,
+                    "isLinkItem": false,
+                    "isNew": false,
+                    "hasCharges": false,
+                    "openWindow": false,
+                    "hasOneTimeChargesPlanProrateHeader": false
+                  },
+                  {
+                    "discountItem": false,
+                    "negativeValue": false,
+                    "linkName": "Learn more",
+                    "linkUrl": "https://myvpostpay.verizonwireless.com/ui/hub/ao/myplan",
+                    "isLinkItem": true,
+                    "isNew": false,
+                    "hasCharges": false,
+                    "openWindow": false,
+                    "hasOneTimeChargesPlanProrateHeader": false
+                  }
+                ],
+                "discountItem": false,
+                "negativeValue": false,
+                "isLinkItem": false,
+                "isNew": false,
+                "hasCharges": false,
+                "openWindow": false,
+                "hasOneTimeChargesPlanProrateHeader": false
+              }
+            ],
+            "discountItem": false,
+            "negativeValue": false,
+            "isLinkItem": false,
+            "isNew": false,
+            "hasCharges": false,
+            "openWindow": false,
+            "hasOneTimeChargesPlanProrateHeader": false
+          }
+        ],
+        "negativeValue": false
+      }
+    ]
+  },
+  "correlation_id": "nope",
+  "jn": "nope"
+}
