@@ -1,6 +1,8 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
-    id("org.jetbrains.kotlin.jvm").version("1.3.11")
-    application
+    id("org.jetbrains.kotlin.jvm") version "1.3.11"
+    id("de.fayard.buildSrcVersions") version "0.3.2"
 }
 
 repositories {
@@ -11,9 +13,9 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.seleniumhq.selenium:selenium-java:3.141.59")
-    implementation("com.codeborne:selenide:5.2.6")
-    implementation("org.koin:koin-core:2.0.1")
-    implementation("com.squareup.okhttp3:okhttp:3.14.2")
+    implementation(Libs.selenide)
+    implementation(Libs.koin_core)
+    implementation(Libs.okhttp)
     implementation("com.amazonaws:aws-lambda-java-core:1.2.0")
     implementation("com.amazonaws:aws-lambda-java-events:2.2.6")
 
@@ -23,6 +25,31 @@ dependencies {
     testImplementation("org.testng:testng:6.14.3")
 }
 
-application {
-    mainClassName = "com.merricklabs.verizon.AppKt"
+val deployDev = tasks.create<Exec>("deployDev") {
+    commandLine = listOf("serverless", "deploy", "--stage=dev")
+}
+
+val deployPrd = tasks.create<Exec>("deployPrd") {
+    commandLine = listOf("serverless", "deploy", "--stage=prd")
+}
+
+// Alias for deploy dev
+val deploy = tasks.create("deploy")
+deploy.dependsOn(deployDev)
+
+deployDev.dependsOn(tasks.getByName("shadowJar"))
+deployPrd.dependsOn(tasks.getByName("shadowJar"))
+
+tasks.test {
+    useTestNG()
+}
+
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    jvmTarget = "1.8"
+}
+
+val compileTestKotlin: KotlinCompile by tasks
+compileTestKotlin.kotlinOptions {
+    jvmTarget = "1.8"
 }
