@@ -11,7 +11,9 @@ provider:
 package:
   artifact: build/libs/${self:service}.jar
 
-# Todo: Add a CloudWatch event source here
 functions:
   helloworld-handler:
     handler: com.merricklabs.wyatt.handlers.WyattHandler
+    events:
+      # 5th day of every month
+      - schedule: cron(0 0 5 * )
