@@ -16,4 +16,4 @@ functions:
     handler: com.merricklabs.wyatt.handlers.WyattHandler
     events:
       # 5th day of every month
-      - schedule: cron(0 0 5 * )
+      - schedule: cron(0 0 5 * ? *)
