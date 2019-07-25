@@ -1,6 +1,7 @@
 package com.merricklabs.wyatt
 
 import com.merricklabs.wyatt.handlers.external.VerizonClient
+import com.merricklabs.wyatt.handlers.logic.WyattLogic
 import com.merricklabs.wyatt.handlers.util.ChromeWebService
 import com.merricklabs.wyatt.pages.LoginPage
 import com.merricklabs.wyatt.util.WyattObjectMapper
@@ -13,4 +14,5 @@ val WyattModule = module {
     single { OkHttpClient() }
     single { VerizonClient() }
     single { WyattObjectMapper() }
+    single { WyattLogic() }
 }
