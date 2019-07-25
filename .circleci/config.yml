@@ -16,6 +16,7 @@ jobs:
       - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
       - run: sudo apt-get install -y build-essential nodejs
       - run: sudo npm install -g serverless
+      - run: sudo npm install serverless-finch
       - checkout
       - run: ./gradlew build
       - run: ./gradlew test
