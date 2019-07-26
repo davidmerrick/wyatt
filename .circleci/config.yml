@@ -7,7 +7,7 @@ jobs:
         environment:
           SERVICES: s3:4572
           DEFAULT_REGION: us-west-2
-    working_directory: ~/workspace
+    working_directory: /tmp/workspace
     environment:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
@@ -15,13 +15,20 @@ jobs:
       - checkout
       - run: ./gradlew build
       - run: ./gradlew test
+      - persist_to_workspace:
+          root: /tmp/workspace
+          paths:
+            - build/libs/*
   deploy:
     docker:
       - image: circleci/openjdk:11.0.3-stretch
         environment:
           JVM_OPTS: -Xmx3200m
           TERM: dumb
+    working_directory: /tmp/workspace
     steps:
+      - attach_workspace:
+          at: /tmp/workspace
       - run: sudo apt-get update
       - run: sudo apt-get install -y curl
       - run: curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
