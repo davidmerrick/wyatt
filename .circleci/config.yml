@@ -7,7 +7,7 @@ jobs:
         environment:
           SERVICES: s3:4572
           DEFAULT_REGION: us-west-2
-    working_directory: /tmp
+    working_directory: ~/repo
     environment:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
@@ -16,7 +16,7 @@ jobs:
       - run: ./gradlew build
       - run: ./gradlew test
       - persist_to_workspace:
-          root: /tmp
+          root: .
           paths:
             - build/libs/*
   deploy:
@@ -25,6 +25,7 @@ jobs:
         environment:
           JVM_OPTS: -Xmx3200m
           TERM: dumb
+    working_directory: ~/repo
     steps:
       - run: sudo apt-get update
       - run: sudo apt-get install -y curl
