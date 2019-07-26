@@ -6,8 +6,7 @@ plugins:
   - serverless-finch
 
 custom:
-  client:
-    bucketName: ${self:service}-bills
+  bucketName: ${self:service}-bills
 
 provider:
   name: aws
@@ -21,6 +20,8 @@ provider:
       Action:
         - s3:PutObject
       Resource: "*"
+  environment:
+    S3_BUCKET_NAME: ${self:custom.bucketName}
 
 package:
   artifact: build/libs/${self:service}.jar
@@ -37,5 +38,5 @@ resources:
     s3Bucket:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: ${self:custom.client.bucketName}
+        BucketName: ${self:custom.bucketName}
         AccessControl: BucketOwnerRead
