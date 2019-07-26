@@ -7,12 +7,13 @@ jobs:
         environment:
           SERVICES: s3:4572
           DEFAULT_REGION: us-west-2
-    working_directory: ~/repo
+    working_directory: ~/workspace
     environment:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
     steps:
       - checkout
+      - run: ./gradlew build
       - run: ./gradlew test
   deploy:
     docker:
