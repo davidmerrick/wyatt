@@ -24,7 +24,7 @@ provider:
     S3_BUCKET_NAME: ${self:custom.bucketName}
 
 package:
-  artifact: build/libs/${self:service}.jar
+  artifact: /tmp/workspace/build/libs/${self:service}.jar
 
 functions:
   wyatt-handler:
