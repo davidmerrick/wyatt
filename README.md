@@ -24,3 +24,7 @@ List files in a bucket:
 
 Delete bucket:
 `aws --endpoint-url=http://localhost:4572 s3 rb s3://wyatt-bills --force`
+
+# Reference
+
+- https://www.npmjs.com/package/serverless-plugin-chrome
