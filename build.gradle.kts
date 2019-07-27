@@ -1,7 +1,7 @@
 group = "com.merricklabs.wyatt"
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version Versions.org_jetbrains_kotlin
+    kotlin("jvm") version Versions.org_jetbrains_kotlin
     id("de.fayard.buildSrcVersions") version Versions.de_fayard_buildsrcversions_gradle_plugin
     id("com.github.johnrengelman.shadow") version Versions.com_github_johnrengelman_shadow_gradle_plugin
 }
@@ -54,7 +54,7 @@ tasks {
     }
 
     val buildZip by creating(Zip::class) {
-        from(compileJava)
+        from(compileKotlin)
         from(processResources)
         into("lib") {
             from(configurations.runtimeClasspath)
