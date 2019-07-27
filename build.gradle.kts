@@ -17,6 +17,8 @@ dependencies {
     implementation(Libs.selenide)
     implementation(Libs.koin_core)
     implementation(Libs.okhttp)
+    implementation(Libs.slf4j_api)
+    implementation(Libs.slf4j_jdk14)
     implementation(Libs.aws_lambda_java_core)
     implementation(Libs.aws_lambda_java_events)
     implementation(Libs.aws_java_sdk_s3)

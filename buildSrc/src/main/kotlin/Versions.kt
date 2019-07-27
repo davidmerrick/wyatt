@@ -7,6 +7,10 @@
 object Versions {
     const val aws_java_sdk_s3: String = "1.11.597" // available: "1.11.598"
 
+    const val slf4j_api: String = "1.7.26"
+
+    const val slf4j_jdk14: String = "1.7.26"
+
     const val aws_lambda_java_core: String = "1.2.0"
 
     const val aws_lambda_java_events: String = "2.2.6"
