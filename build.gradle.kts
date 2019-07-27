@@ -3,7 +3,6 @@ group = "com.merricklabs.wyatt"
 plugins {
     kotlin("jvm") version Versions.org_jetbrains_kotlin
     id("de.fayard.buildSrcVersions") version Versions.de_fayard_buildsrcversions_gradle_plugin
-    id("com.github.johnrengelman.shadow") version Versions.com_github_johnrengelman_shadow_gradle_plugin
 }
 
 repositories {
@@ -39,12 +38,10 @@ tasks {
 
     val deployPrd by creating(Exec::class) {
         commandLine = listOf("serverless", "deploy", "--stage=prd")
-        dependsOn("shadowJar")
     }
 
     val deployDev by creating(Exec::class) {
         commandLine = listOf("serverless", "deploy", "--stage=dev")
-        dependsOn("shadowJar")
     }
 
     val deploy by creating {
