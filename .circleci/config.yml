@@ -36,7 +36,6 @@ jobs:
           at: /tmp/workspace
       - run: sudo npm install -g serverless
       - run: sudo npm install serverless-finch
-      - run: sudo npm install serverless-plugin-chrome
       - deploy:
           name: Deploy to AWS
           command: ./gradlew deployPrd

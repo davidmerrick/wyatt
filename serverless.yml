@@ -4,7 +4,6 @@ frameworkVersion: ">=1.2.0 <2.0.0"
 
 plugins:
   - serverless-finch
-  - serverless-plugin-chrome
 
 custom:
   bucketName: ${self:service}-bills
