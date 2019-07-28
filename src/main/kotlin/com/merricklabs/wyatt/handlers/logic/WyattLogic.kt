@@ -12,6 +12,7 @@ import org.awaitility.Awaitility.await
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import org.openqa.selenium.WebDriver
+import java.time.LocalDateTime
 import java.util.concurrent.TimeUnit
 
 private val log = KotlinLogging.logger {}
@@ -57,10 +58,18 @@ class WyattLogic : KoinComponent {
         billPage.load()
         val bill = billPage.fetchBill()
         log.info("Success: Fetched bill. Bill length: ${bill.length}")
+
         wyattS3Client.s3.putObject(
                 config.s3BucketName,
-                "bill.json",
+                getBillFileName(),
                 mapper.writeValueAsString(bill)
         )
+    }
+
+    private fun getBillFileName(): String {
+        val now = LocalDateTime.now()
+        val month = now.month.name.toLowerCase()
+        val year = now.year
+        return "bill-$month-$year.json"
     }
 }
