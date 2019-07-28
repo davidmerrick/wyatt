@@ -24,7 +24,7 @@ provider:
     S3_BUCKET_NAME: ${self:custom.bucketName}
     VERIZON_USERNAME: ${env:VERIZON_USERNAME}
     VERIZON_PASSWORD: ${env:VERIZON_PASSWORD}
-    SECURITY_ANSWER_1: ${env:SECURITY_ANSWER_1}
+    SECURITY_ANSWER: ${env:SECURITY_ANSWER}
 
 package:
   artifact: /tmp/workspace/build/distributions/${self:service}.zip

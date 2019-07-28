@@ -13,6 +13,8 @@ class WyattConfig : KoinComponent {
     class Verizon {
         val username: String = System.getenv("VERIZON_USERNAME")
         val password: String = System.getenv("VERIZON_PASSWORD")
-        val securityAnswer1: String = System.getenv("SECURITY_ANSWER_1")
+
+        // Verizon accounts only have one security question
+        val securityAnswer: String = System.getenv("SECURITY_ANSWER")
     }
 }

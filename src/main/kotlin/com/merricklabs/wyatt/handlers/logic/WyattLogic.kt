@@ -1,7 +1,6 @@
 package com.merricklabs.wyatt.handlers.logic
 
 import com.codeborne.selenide.webdriver.WebDriverFactory
-import com.fasterxml.jackson.databind.ObjectMapper
 import com.merricklabs.wyatt.config.WyattConfig
 import com.merricklabs.wyatt.external.aws.WyattS3Client
 import com.merricklabs.wyatt.pages.BillPage
@@ -12,7 +11,6 @@ import org.awaitility.Awaitility.await
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import org.openqa.selenium.WebDriver
-import java.time.LocalDateTime
 import java.util.concurrent.TimeUnit
 
 private val log = KotlinLogging.logger {}
@@ -24,7 +22,6 @@ class WyattLogic : KoinComponent {
     private val loginPage by inject<LoginPage>()
     private val securityPage by inject<SecurityQuestionPage>()
     private val billPage by inject<BillPage>()
-    private val mapper by inject<ObjectMapper>()
 
     private val driver: WebDriver
 
@@ -43,7 +40,7 @@ class WyattLogic : KoinComponent {
         // Verizon will sometimes throw up a "we don't recognize this device" page
         try {
             securityPage.load()
-            securityPage.enterSecurityAnswer(config.verizon.securityAnswer1)
+            securityPage.enterSecurityAnswer(config.verizon.securityAnswer)
             securityPage.submit()
         } catch (e: Exception) {
             // It's probably fine. Continue and confirm we're logged in
@@ -59,17 +56,6 @@ class WyattLogic : KoinComponent {
         val bill = billPage.fetchBill()
         log.info("Success: Fetched bill. Bill length: ${bill.length}")
 
-        wyattS3Client.s3.putObject(
-                config.s3BucketName,
-                getBillFileName(),
-                mapper.writeValueAsString(bill)
-        )
-    }
-
-    private fun getBillFileName(): String {
-        val now = LocalDateTime.now()
-        val month = now.month.name.toLowerCase()
-        val year = now.year
-        return "bill-$month-$year.json"
+        wyattS3Client.uploadBill(bill)
     }
 }
