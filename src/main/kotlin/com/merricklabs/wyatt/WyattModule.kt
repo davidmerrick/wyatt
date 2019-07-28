@@ -1,6 +1,7 @@
 package com.merricklabs.wyatt
 
 import com.codeborne.selenide.webdriver.WebDriverFactory
+import com.fasterxml.jackson.databind.ObjectMapper
 import com.merricklabs.wyatt.config.WyattConfig
 import com.merricklabs.wyatt.external.aws.WyattS3Client
 import com.merricklabs.wyatt.external.aws.WyattS3ClientImpl
@@ -18,7 +19,7 @@ val WyattModule = module {
     single { SecurityQuestionPage() }
     single { OkHttpClient() }
     single { VerizonClient() }
-    single { WyattObjectMapper() }
+    single { WyattObjectMapper() as ObjectMapper }
     single { WyattLogic() }
     single { WyattS3ClientImpl() as WyattS3Client }
     single { WyattConfig() }

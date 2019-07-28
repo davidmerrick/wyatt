@@ -1,8 +1,8 @@
 package com.merricklabs.wyatt.external.verizon
 
 import com.codeborne.selenide.webdriver.WebDriverFactory
+import com.fasterxml.jackson.databind.ObjectMapper
 import com.merricklabs.wyatt.models.verizon.VerizonBill
-import com.merricklabs.wyatt.util.WyattObjectMapper
 import org.awaitility.Awaitility.await
 import org.koin.core.KoinComponent
 import org.koin.core.inject
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit
 
 class VerizonClient : KoinComponent {
 
-    private val mapper by inject<WyattObjectMapper>()
+    private val mapper by inject<ObjectMapper>()
     private val driverFactory by inject<WebDriverFactory>()
     private val driver: WebDriver
 

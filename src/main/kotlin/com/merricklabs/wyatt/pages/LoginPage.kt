@@ -1,8 +1,11 @@
 package com.merricklabs.wyatt.pages
 
+import mu.KotlinLogging
 import org.openqa.selenium.By
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
+
+private val log = KotlinLogging.logger {}
 
 class LoginPage : WyattPage() {
     override val pageLoadHook = {
@@ -14,6 +17,7 @@ class LoginPage : WyattPage() {
     }
 
     fun enterUsername(username: String) {
+        log.info("Entering username")
         val selector = By.cssSelector(USERNAME_SELECTOR)
         WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(selector))
@@ -23,6 +27,7 @@ class LoginPage : WyattPage() {
     }
 
     fun enterPassword(password: String) {
+        log.info("Entering password")
         val selector = By.cssSelector(PASSWORD_SELECTOR)
         WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(selector))
@@ -32,6 +37,7 @@ class LoginPage : WyattPage() {
     }
 
     fun submit() {
+        log.info("Submitting login form")
         val selector = By.cssSelector(SUBMIT_SELECTOR)
         WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(selector))

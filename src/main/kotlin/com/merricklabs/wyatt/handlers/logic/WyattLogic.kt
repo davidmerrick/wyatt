@@ -35,41 +35,35 @@ class WyattLogic : KoinComponent {
     }
 
     fun handleRequest() {
+        log.info("Spinning up Chrome")
+        loginPage.goto()
+        loginPage.load()
+        loginPage.enterUsername(config.verizon.username)
+        loginPage.enterPassword(config.verizon.password)
+        loginPage.submit()
+
+        // Verizon will sometimes throw up a "we don't recognize this device" page
         try {
-            log.info("Spinning up Chrome")
-            loginPage.goto()
-            loginPage.load()
-            loginPage.enterUsername(config.verizon.username)
-            loginPage.enterPassword(config.verizon.password)
-            loginPage.submit()
-
-            // Verizon will sometimes throw up a "we don't recognize this device" page
-            try {
-                securityPage.load()
-                securityPage.enterSecurityQuestion(config.verizon.securityAnswer1)
-                securityPage.submit()
-            } catch (e: Exception) {
-                // It's probably fine. Continue and confirm we're logged in
-                log.error { e }
-            }
-
-            await().atMost(10, TimeUnit.SECONDS).until {
-                loginPage.isLoggedIn()
-            }
-
-            val bill = verizonClient.fetchBill()
-            log.info("Success: Fetched bill")
-            wyattS3Client.s3.putObject(
-                    config.s3BucketName,
-                    "bill",
-                    mapper.writeValueAsString(bill)
-            )
+            securityPage.load()
+            securityPage.enterSecurityAnswer(config.verizon.securityAnswer1)
+            securityPage.submit()
         } catch (e: Exception) {
+            // It's probably fine. Continue and confirm we're logged in
             log.error { e }
-            val takesScreenshot = driver as TakesScreenshot
-            val screenshot = takesScreenshot.getScreenshotAs(OutputType.FILE)
-            log.info("Got screenshot: $screenshot")
         }
+
+        await().atMost(10, TimeUnit.SECONDS).until {
+            loginPage.isLoggedIn()
+        }
+
+        val bill = verizonClient.fetchBill()
+        log.info("Success: Fetched bill")
+        wyattS3Client.s3.putObject(
+                config.s3BucketName,
+                "bill",
+                mapper.writeValueAsString(bill)
+        )
+
     }
 
     fun takeScreenshot(): File {
