@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.merricklabs.wyatt.config.WyattConfig
 import com.merricklabs.wyatt.external.aws.WyattS3Client
 import com.merricklabs.wyatt.external.aws.WyattS3ClientImpl
-import com.merricklabs.wyatt.external.verizon.VerizonClient
 import com.merricklabs.wyatt.handlers.logic.WyattLogic
+import com.merricklabs.wyatt.pages.BillPage
 import com.merricklabs.wyatt.pages.LoginPage
 import com.merricklabs.wyatt.pages.SecurityQuestionPage
 import com.merricklabs.wyatt.util.LambdaWebDriverFactory
@@ -18,7 +18,7 @@ val WyattModule = module {
     single { LoginPage() }
     single { SecurityQuestionPage() }
     single { OkHttpClient() }
-    single { VerizonClient() }
+    single { BillPage() }
     single { WyattObjectMapper() as ObjectMapper }
     single { WyattLogic() }
     single { WyattS3ClientImpl() as WyattS3Client }

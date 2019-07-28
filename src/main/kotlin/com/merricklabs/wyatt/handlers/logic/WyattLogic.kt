@@ -4,7 +4,7 @@ import com.codeborne.selenide.webdriver.WebDriverFactory
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.merricklabs.wyatt.config.WyattConfig
 import com.merricklabs.wyatt.external.aws.WyattS3Client
-import com.merricklabs.wyatt.external.verizon.VerizonClient
+import com.merricklabs.wyatt.pages.BillPage
 import com.merricklabs.wyatt.pages.LoginPage
 import com.merricklabs.wyatt.pages.SecurityQuestionPage
 import mu.KotlinLogging
@@ -25,7 +25,7 @@ class WyattLogic : KoinComponent {
     private val driverFactory by inject<WebDriverFactory>()
     private val loginPage by inject<LoginPage>()
     private val securityPage by inject<SecurityQuestionPage>()
-    private val verizonClient by inject<VerizonClient>()
+    private val billPage by inject<BillPage>()
     private val mapper by inject<ObjectMapper>()
 
     private val driver: WebDriver
@@ -56,7 +56,9 @@ class WyattLogic : KoinComponent {
             loginPage.isLoggedIn()
         }
 
-        val bill = verizonClient.fetchBill()
+        billPage.goto()
+        billPage.load()
+        val bill = billPage.fetchBill()
         log.info("Success: Fetched bill")
         wyattS3Client.s3.putObject(
                 config.s3BucketName,

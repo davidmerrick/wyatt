@@ -1,7 +1,6 @@
 package com.merricklabs.wyatt.pages
 
 import com.merricklabs.wyatt.IntegrationTestBase
-import com.merricklabs.wyatt.external.verizon.VerizonClient
 import org.koin.test.get
 import org.testng.annotations.Test
 
@@ -16,7 +15,7 @@ class LoginPageTest : IntegrationTestBase() {
         loginPage.submit()
 
         Thread.sleep(3000)
-        val verizonClient = get<VerizonClient>()
+        val verizonClient = get<BillPage>()
         verizonClient.fetchBill()
     }
 }
