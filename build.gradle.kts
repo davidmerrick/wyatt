@@ -25,6 +25,7 @@ dependencies {
     implementation(Libs.jackson_databind)
     implementation(Libs.jackson_module_kotlin)
     implementation(Libs.kotlin_logging)
+    implementation("org.awaitility:awaitility:3.0.0")
 
     testImplementation(Libs.koin_test)
     testImplementation(Libs.kotlin_test)

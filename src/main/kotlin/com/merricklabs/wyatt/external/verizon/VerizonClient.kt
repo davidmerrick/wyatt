@@ -1,28 +1,32 @@
 package com.merricklabs.wyatt.external.verizon
 
-import com.google.common.net.HttpHeaders
+import com.codeborne.selenide.webdriver.WebDriverFactory
 import com.merricklabs.wyatt.models.verizon.VerizonBill
 import com.merricklabs.wyatt.util.WyattObjectMapper
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import org.awaitility.Awaitility.await
 import org.koin.core.KoinComponent
 import org.koin.core.inject
-import org.openqa.selenium.Cookie
+import org.openqa.selenium.By
+import org.openqa.selenium.WebDriver
+import java.util.concurrent.TimeUnit
 
 class VerizonClient : KoinComponent {
 
-    private val okHttpClient by inject<OkHttpClient>()
     private val mapper by inject<WyattObjectMapper>()
+    private val driverFactory by inject<WebDriverFactory>()
+    private val driver: WebDriver
 
+    init {
+        driver = driverFactory.createWebDriver(null, null)
+    }
 
-    fun fetchBill(cookies: Set<Cookie>): VerizonBill {
-        val request = Request.Builder()
-                .url(BILL_URL)
-                .addHeader(HttpHeaders.COOKIE, cookies.joinToString(";"))
-                .get()
-                .build()
-        val response = okHttpClient.newCall(request).execute()
-        return mapper.readValue(response.body()!!.string(), VerizonBill::class.java)
+    fun fetchBill(): VerizonBill {
+        driver.get(BILL_URL)
+        await().atMost(10, TimeUnit.SECONDS).until {
+            driver.currentUrl.contains(BILL_URL)
+        }
+        val pageSource = driver.findElement(By.cssSelector("pre")).text
+        return mapper.readValue(pageSource, VerizonBill::class.java)
     }
 
     private companion object {

@@ -7,9 +7,11 @@ import com.merricklabs.wyatt.external.aws.WyattS3Client
 import com.merricklabs.wyatt.external.verizon.VerizonClient
 import com.merricklabs.wyatt.pages.LoginPage
 import mu.KotlinLogging
+import org.awaitility.Awaitility.await
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 import org.openqa.selenium.WebDriver
+import java.util.concurrent.TimeUnit
 
 private val log = KotlinLogging.logger {}
 
@@ -33,9 +35,11 @@ class WyattLogic : KoinComponent {
         loginPage.enterUsername(config.verizon.username)
         loginPage.enterPassword(config.verizon.password)
         loginPage.submit()
-        Thread.sleep(2000)
+        await().atMost(10, TimeUnit.SECONDS).until {
+            loginPage.isLoggedIn()
+        }
 
-        val bill = verizonClient.fetchBill(driver.manage().cookies)
+        val bill = verizonClient.fetchBill()
         wyattS3Client.s3.putObject(
                 config.s3BucketName,
                 "bill",

@@ -47,6 +47,10 @@ class LoginPage : KoinComponent {
         field.click()
     }
 
+    fun isLoggedIn(): Boolean {
+        return driver.currentUrl.contains("myvpostpay.verizonwireless.com")
+    }
+
     private companion object {
         const val LOGIN_URL = "https://login.verizonwireless.com/vzauth/UI/Login?userNameOnly=false&mode=i&realm=vzw&customerType=DO"
         const val USERNAME_SELECTOR = "input#IDToken1"

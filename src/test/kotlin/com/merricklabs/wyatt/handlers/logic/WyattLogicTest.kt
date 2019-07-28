@@ -6,7 +6,7 @@ import org.testng.annotations.Test
 
 class WyattLogicTest : IntegrationTestBase() {
 
-    @Test(enabled = false)
+    @Test
     fun `Test logic`() {
         val logic = get<WyattLogic>()
         logic.handleRequest()
