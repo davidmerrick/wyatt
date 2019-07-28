@@ -11,6 +11,8 @@ import org.koin.test.get
 import org.testng.annotations.AfterMethod
 import org.testng.annotations.BeforeMethod
 
+const val INTEGRATION_GROUP = "integration"
+
 open class IntegrationTestBase : KoinTest {
 
     @BeforeMethod
