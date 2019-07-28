@@ -19,7 +19,7 @@ provider:
     - Effect: Allow
       Action:
         - s3:PutObject
-      Resource: "*"
+      Resource: arn:aws:s3:::${self:custom.bucketName}/*
   environment:
     S3_BUCKET_NAME: ${self:custom.bucketName}
 
