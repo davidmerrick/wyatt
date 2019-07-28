@@ -11,10 +11,7 @@ import mu.KotlinLogging
 import org.awaitility.Awaitility.await
 import org.koin.core.KoinComponent
 import org.koin.core.inject
-import org.openqa.selenium.OutputType
-import org.openqa.selenium.TakesScreenshot
 import org.openqa.selenium.WebDriver
-import java.io.File
 import java.util.concurrent.TimeUnit
 
 private val log = KotlinLogging.logger {}
@@ -65,10 +62,5 @@ class WyattLogic : KoinComponent {
                 "bill.json",
                 mapper.writeValueAsString(bill)
         )
-    }
-
-    fun takeScreenshot(): File {
-        val takesScreenshot = driver as TakesScreenshot
-        return takesScreenshot.getScreenshotAs(OutputType.FILE)
     }
 }
