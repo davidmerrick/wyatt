@@ -22,6 +22,8 @@ provider:
       Resource: arn:aws:s3:::${self:custom.bucketName}/*
   environment:
     S3_BUCKET_NAME: ${self:custom.bucketName}
+    VERIZON_USERNAME: ${env:VERIZON_USERNAME}
+    VERIZON_PASSWORD: ${env:VERIZON_PASSWORD}
 
 package:
   artifact: /tmp/workspace/build/distributions/${self:service}.zip
