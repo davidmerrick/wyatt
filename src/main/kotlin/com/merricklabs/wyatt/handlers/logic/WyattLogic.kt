@@ -59,13 +59,12 @@ class WyattLogic : KoinComponent {
         billPage.goto()
         billPage.load()
         val bill = billPage.fetchBill()
-        log.info("Success: Fetched bill")
+        log.info("Success: Fetched bill. Bill length: ${bill.length}")
         wyattS3Client.s3.putObject(
                 config.s3BucketName,
-                "bill",
+                "bill.json",
                 mapper.writeValueAsString(bill)
         )
-
     }
 
     fun takeScreenshot(): File {

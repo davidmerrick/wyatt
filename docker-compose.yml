@@ -16,27 +16,16 @@ services:
     networks:
       - my_awesome_network
 
-  setup-resources:
+  cli:
     image: mesosphere/aws-cli
+    tty: true
     volumes:
       - ./dev_env:/project/dev_env
+    entrypoint: tail -f /dev/null
     environment:
       - AWS_ACCESS_KEY_ID=dummyaccess
       - AWS_SECRET_ACCESS_KEY=dummysecret
       - AWS_DEFAULT_REGION=us-east-1
-    entrypoint: /bin/sh -c
-    command: >
-      "
-        # Needed so all localstack components will startup correctly (i'm sure there's a better way to do this)
-        sleep 10;
-        aws dynamodb create-table --endpoint-url=http://localstack:4569 --table-name my_table \
-          --attribute-definitions AttributeName=key,AttributeType=S \
-          --key-schema AttributeName=key,KeyType=HASH \
-          --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5;
-        aws kinesis create-stream --endpoint-url=http://localstack:4568 --stream-name my_stream --shard-count 1;
-        aws sqs create-queue --endpoint-url=http://localstack:4576 --queue-name my_queue;
-        # you can go on and put initial items in tables...
-      "
     networks:
       - my_awesome_network
     depends_on:

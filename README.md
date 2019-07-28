@@ -22,6 +22,9 @@ List buckets:
 List files in a bucket: 
 `aws --endpoint-url=http://localhost:4572 s3 ls s3://wyatt-bills`
 
+Get a file:
+`aws --endpoint-url=http://localhost:4572 s3 cp s3://wyatt-bills/bill.json /tmp/bill.json`
+
 Delete bucket:
 `aws --endpoint-url=http://localhost:4572 s3 rb s3://wyatt-bills --force`
 
