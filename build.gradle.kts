@@ -56,6 +56,7 @@ tasks {
         from(compileKotlin)
         from(processResources)
         into("lib") {
+            from(zipTree("lib/lib.zip"))
             from(configurations.runtimeClasspath)
         }
     }
