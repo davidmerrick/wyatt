@@ -22,7 +22,7 @@ class VerizonClient : KoinComponent {
 
     fun fetchBill(): VerizonBill {
         driver.get(BILL_URL)
-        await().atMost(10, TimeUnit.SECONDS).until {
+        await().atMost(20, TimeUnit.SECONDS).until {
             driver.currentUrl.contains(BILL_URL)
         }
         val pageSource = driver.findElement(By.cssSelector("pre")).text

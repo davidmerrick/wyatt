@@ -1,20 +1,12 @@
 package com.merricklabs.wyatt.pages
 
-import com.codeborne.selenide.webdriver.WebDriverFactory
-import org.koin.core.KoinComponent
-import org.koin.core.inject
 import org.openqa.selenium.By
-import org.openqa.selenium.WebDriver
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
 
-class LoginPage : KoinComponent {
-
-    private val driverFactory by inject<WebDriverFactory>()
-    private val driver: WebDriver
-
-    init {
-        driver = driverFactory.createWebDriver(null, null)!!
+class LoginPage : WyattPage() {
+    override val pageLoadHook = {
+        driver.findElement(By.cssSelector(SUBMIT_SELECTOR)).isDisplayed
     }
 
     fun goto() {

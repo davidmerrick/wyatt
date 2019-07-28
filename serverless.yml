@@ -13,8 +13,8 @@ provider:
   runtime: java8
   stage: ${opt:stage, "dev"}
   region: us-west-2
-  memorySize: 512
-  timeout: 20
+  memorySize: 1024
+  timeout: 30
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -24,6 +24,7 @@ provider:
     S3_BUCKET_NAME: ${self:custom.bucketName}
     VERIZON_USERNAME: ${env:VERIZON_USERNAME}
     VERIZON_PASSWORD: ${env:VERIZON_PASSWORD}
+    SECURITY_ANSWER_1: ${env:SECURITY_ANSWER_1}
 
 package:
   artifact: /tmp/workspace/build/distributions/${self:service}.zip
