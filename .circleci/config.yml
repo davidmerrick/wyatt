@@ -40,7 +40,6 @@ jobs:
       - attach_workspace:
           at: /tmp/workspace
       - run: sudo npm install -g serverless
-      - run: sudo npm install serverless-finch
       - deploy:
           name: Deploy to AWS
           command: ./gradlew deployPrd

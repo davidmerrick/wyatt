@@ -2,11 +2,11 @@ service: wyatt
 
 frameworkVersion: ">=1.2.0 <2.0.0"
 
-plugins:
-  - serverless-finch
-
 custom:
   bucketName: ${self:service}-bills
+  snsTopic: ${self:service}-${self:provider.stage}
+  topicArn:
+    Fn::Sub: arn:aws:sns:$(self:provider.region):*:$(self:custom.snsTopic)
 
 provider:
   name: aws
@@ -40,6 +40,27 @@ resources:
   Resources:
     s3Bucket:
       Type: AWS::S3::Bucket
+      DependsOn: SNSTopicPolicy
       Properties:
         BucketName: ${self:custom.bucketName}
         AccessControl: BucketOwnerRead
+        NotificationConfiguration:
+          TopicConfigurations:
+            - Event: s3:ObjectCreated:Put
+              Topic: ${self:custom.topicArn}
+    SNSTopicPolicy:
+      Type: AWS::SNS::TopicPolicy
+      Properties:
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Principal:
+                AWS: "*"
+              Action: sns:Publish
+              Resource: ${self:custom.topicArn}
+    SNSTopic:
+      Type: AWS::SNS::Topic
+      Properties:
+        DisplayName: ${self:custom.snsTopic}
+        TopicName: ${self:custom.snsTopic}
