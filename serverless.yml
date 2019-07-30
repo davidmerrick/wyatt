@@ -59,6 +59,8 @@ resources:
                 AWS: "*"
               Action: sns:Publish
               Resource: ${self:custom.topicArn}
+        Topics:
+          - ${self:custom.topicArn}
     SNSTopic:
       Type: AWS::SNS::Topic
       Properties:
