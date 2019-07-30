@@ -6,7 +6,7 @@ custom:
   bucketName: ${self:service}-bills
   snsTopic: ${self:service}-${self:provider.stage}
   topicArn:
-    Fn::Sub: arn:aws:sns:$(self:provider.region):*:$(self:custom.snsTopic)
+    Fn::Sub: arn:aws:sns:${self:provider.region}:*:${self:custom.snsTopic}
 
 provider:
   name: aws
