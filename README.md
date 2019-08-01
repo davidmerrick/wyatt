@@ -1,8 +1,8 @@
 # Wyatt
 
-Lambda service triggered by a monthly CloudWatch event which fetches your Verizon bill in JSON format and stores it in S3.
+Lambda service triggered by a monthly CloudWatch event which fetches your Verizon bill in JSON format and stores it in S3. On upload, the S3 bucket publishes a notification to SNS topic `wyatt-prd`.
 
-I'm writing a separate, private service which will trigger off of the S3 event and split the bill with my family.
+I have a separate, private service which triggers off of this notification event and splits the bill with my family.
 
 Named after [Ben Wyatt](https://en.wikipedia.org/wiki/Ben_Wyatt_(Parks_and_Recreation)), the auditor from "Parks and Rec" played by Adam Scott.
 
