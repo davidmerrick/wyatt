@@ -6,7 +6,7 @@ I have a separate, private service which triggers off of this notification event
 
 Named after [Ben Wyatt](https://en.wikipedia.org/wiki/Ben_Wyatt_(Parks_and_Recreation)), the auditor from "Parks and Rec" played by Adam Scott.
 
-![Ben Wyatt](img/wyatt.webp)
+![Ben Wyatt](img/wyatt.jpg)
 
 # Localstack
 
