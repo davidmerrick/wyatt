@@ -4,9 +4,11 @@ import org.koin.core.KoinComponent
 
 const val DEFAULT_REGION = "us-west-2"
 const val DEFAULT_BUCKET_NAME = "wyatt-bills"
+const val DEFAULT_ERRORS_BUCKET_NAME = "wyatt-errors"
 
 class WyattConfig : KoinComponent {
     val s3BucketName: String = System.getenv("S3_BUCKET_NAME") ?: DEFAULT_BUCKET_NAME
+    val errorsBucketName: String = System.getenv("ERRORS_BUCKET_NAME") ?: DEFAULT_ERRORS_BUCKET_NAME
     val awsRegion: String = System.getenv("AWS_REGION") ?: DEFAULT_REGION
     val verizon = Verizon()
 

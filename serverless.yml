@@ -4,6 +4,7 @@ frameworkVersion: ">=1.2.0 <2.0.0"
 
 custom:
   bucketName: ${self:service}-bills
+  errorsBucketName: ${self:service}-errors
   snsTopic: ${self:service}-${self:provider.stage}
   topicArn:
     Fn::Join:
@@ -25,8 +26,13 @@ provider:
       Action:
         - s3:PutObject
       Resource: arn:aws:s3:::${self:custom.bucketName}/*
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+      Resource: arn:aws:s3:::${self:custom.errorsBucketName}/*
   environment:
     S3_BUCKET_NAME: ${self:custom.bucketName}
+    ERRORS_BUCKET_NAME: ${self:custom.errorsBucketName}
     VERIZON_USERNAME: ${env:VERIZON_USERNAME}
     VERIZON_PASSWORD: ${env:VERIZON_PASSWORD}
     SECURITY_ANSWER: ${env:SECURITY_ANSWER}
@@ -53,6 +59,11 @@ resources:
           TopicConfigurations:
             - Event: s3:ObjectCreated:Put
               Topic: ${self:custom.topicArn}
+    errorsBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.errorsBucketName}
+        AccessControl: BucketOwnerRead
     SNSTopicPolicy:
       Type: AWS::SNS::TopicPolicy
       Properties:
