@@ -1,10 +1,10 @@
 package com.merricklabs.wyatt.external.aws
 
 import com.amazonaws.services.s3.AmazonS3
-import com.amazonaws.services.s3.model.Bucket
 import com.merricklabs.wyatt.config.WyattConfig
 import org.koin.core.KoinComponent
 import org.koin.core.inject
+import java.io.File
 import java.time.LocalDateTime
 
 abstract class WyattS3Client : KoinComponent {
@@ -16,6 +16,10 @@ abstract class WyattS3Client : KoinComponent {
         s3.putObject(config.s3BucketName, getBillFileName(), billSrc)
     }
 
+    fun uploadScreenshot(screenshot: File) {
+        s3.putObject(config.errorsBucketName, "screenshot-${LocalDateTime.now()}.png", screenshot)
+    }
+
     private fun getBillFileName(): String {
         val now = LocalDateTime.now()
         val month = now.month.name.toLowerCase()
@@ -23,6 +27,13 @@ abstract class WyattS3Client : KoinComponent {
         return "bill-$month-$year.json"
     }
 
-    fun createBucket(): Bucket = this.s3.createBucket(config.s3BucketName)
-    fun deleteBucket() = this.s3.forceDeleteBucket(config.s3BucketName)
+    fun createBuckets() {
+        this.s3.createBucket(config.s3BucketName)
+        this.s3.createBucket(config.errorsBucketName)
+    }
+
+    fun deleteBuckets() {
+        this.s3.forceDeleteBucket(config.s3BucketName)
+        this.s3.forceDeleteBucket(config.errorsBucketName)
+    }
 }

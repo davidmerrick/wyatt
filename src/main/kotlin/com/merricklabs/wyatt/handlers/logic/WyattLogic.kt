@@ -10,6 +10,8 @@ import mu.KotlinLogging
 import org.awaitility.Awaitility.await
 import org.koin.core.KoinComponent
 import org.koin.core.inject
+import org.openqa.selenium.OutputType
+import org.openqa.selenium.TakesScreenshot
 import org.openqa.selenium.WebDriver
 import java.util.concurrent.TimeUnit
 
@@ -31,6 +33,29 @@ class WyattLogic : KoinComponent {
 
     fun handleRequest() {
         log.info("Spinning up Chrome")
+        try {
+            loginToVerizon()
+        } catch (e: Exception) {
+            log.error("There was a problem logging into Verizon. Saving screenshot.", e)
+            saveScreenshot()
+            throw e
+        }
+
+        billPage.goto()
+        billPage.load()
+        val bill = billPage.fetchBill()
+        log.info("Success: Fetched bill. Bill length: ${bill.length}")
+
+        wyattS3Client.uploadBill(bill)
+    }
+
+    private fun saveScreenshot() {
+        driver as TakesScreenshot
+        val screenshot = driver.getScreenshotAs(OutputType.FILE)
+        wyattS3Client.uploadScreenshot(screenshot)
+    }
+
+    private fun loginToVerizon() {
         loginPage.goto()
         loginPage.load()
         loginPage.enterUsername(config.verizon.username)
@@ -50,12 +75,5 @@ class WyattLogic : KoinComponent {
         await().atMost(10, TimeUnit.SECONDS).until {
             loginPage.isLoggedIn()
         }
-
-        billPage.goto()
-        billPage.load()
-        val bill = billPage.fetchBill()
-        log.info("Success: Fetched bill. Bill length: ${bill.length}")
-
-        wyattS3Client.uploadBill(bill)
     }
 }
